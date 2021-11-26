@@ -28,7 +28,7 @@ RUN	\
     && rm ${APACHE_CONF_DIR}/sites-enabled/000-default.conf ${APACHE_CONF_DIR}/sites-available/000-default.conf ${APACHE_CONF_DIR}/conf-enabled/serve-cgi-bin.conf \
     && a2enmod rewrite php7.4 ssl \
 	# Install composer
-	&& curl -sS https://getcomposer.org/installer | php -- --version=2.1.12 --install-dir=/usr/local/bin --filename=composer \
+	&& curl -sS https://getcomposer.org/installer | php -- --version=1.10.23 --install-dir=/usr/local/bin --filename=composer \
 	# Cleaning
 	&& apt-get purge -y --auto-remove $BUILD_DEPS \
 	&& apt-get autoremove -y \
